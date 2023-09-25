@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>RC Car Instructions</title>
+  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <script src="index.js"></script>
+  <script src="custom_category_es6.js"></script>
+  <script src="toolbox_label_es6.js"></script>
+  <link rel="stylesheet" href="toolbox_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-weight: normal;
+      font-size: 140%;
+      margin: 10px;
+    }
+
+    #blocklyDiv {
+      float: bottom;
+      height: 90%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body onload="start()">
+  <h1>Car Instructions</h1>
+  <div id="blocklyDiv"></div>
+
+  <!-- Toolbox Definition -->
+  <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox-categories" style="display: none">
+    <toolboxlabel name="Custom Toolbox" colour="darkslategrey"></toolboxlabel>
+    
+  
+    <category name="Movement" categorystyle="math_category">
+      <block type="math_number" gap="32">
+        <field name="NUM">123</field>
+      </block>
+    </category>
+  </xml>
+</body>
+</html>
+
+
