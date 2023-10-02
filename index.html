@@ -31,7 +31,7 @@
 
     #blocklyDiv {
       float: bottom;
-      height: 90%;
+      height: 50%;
       width: 100%;
     }
   </style>
@@ -45,13 +45,40 @@
   <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox-categories" style="display: none">
     <toolboxlabel name="Custom Toolbox" colour="darkslategrey"></toolboxlabel>
     
+    
   
     <category name="Movement" categorystyle="math_category">
-      <block type="math_number" gap="32">
-        <field name="NUM">123</field>
+
+      
+      <block type="run"></block>
+
+      <block type="move"> 
+        <field name="DISTANCE">10</field>
       </block>
+
+      <block type="turn">
+            <field name="DIRECTION"></field> 
+      </block>
+
+
     </category>
   </xml>
+
+  <div class="row button-row">
+    <button onclick="generateCode()">Generate JavaScript</button>
+    <input type="file" id="loadInput" style="display: none;" onchange="loadBlocksFile(event)">
+  </div>
+  <div class="row">
+      <div id="codeDiv" class="half-width"></div>
+      <div id="outputDiv" class="half-width"></div>
+  </div>
+
+  <script>
+    function generateCode() {
+        var code = Blockly.JavaScript.workspaceToCode(workspace);
+        document.getElementById('codeDiv').innerText = code;
+    }
+  </script>
 </body>
 </html>
 

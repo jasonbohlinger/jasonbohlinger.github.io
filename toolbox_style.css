@@ -25,3 +25,8 @@
 .blocklyTreeRow {
   height: initial;
 }
+
+.row {
+  width: 500;
+  height: 500;
+}
